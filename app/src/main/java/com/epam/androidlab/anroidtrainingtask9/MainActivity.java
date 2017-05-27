@@ -71,10 +71,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             protected void onPostExecute(String s) {
                 super.onPostExecute(s);
+                progressBar.setVisibility(View.INVISIBLE);
                 if (s != null) {
                     text.setText(s);
                 }
-                progressBar.setVisibility(View.INVISIBLE);
             }
         }.execute();
     }

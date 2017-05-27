@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Anroid Training Task 9</string>
+    <string name="saveButtonText">Save</string>
+    <string name="openButtonText">Open</string>
+</resources>

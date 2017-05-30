@@ -60,8 +60,16 @@ public class MainActivity extends AppCompatActivity {
             protected String doInBackground(Void... params) {
                 String source = "";
                 try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
-                    while (reader.ready())
+                    while (reader.ready()) {
                         source += reader.readLine();
+                    }
+                    // I used Thread.sleep to see that progress bar in main Thread works,
+                    // while Asynctask uploading data.
+                    try {
+                        Thread.sleep(5000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
